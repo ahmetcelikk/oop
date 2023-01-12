@@ -16,7 +16,7 @@ class Teacher extends User(){
     introduce(){
         let text =super.introduce();// Ana class daki introduce methodunu kullandırtan yapı superdir.Bunu kullanarak override etmiş olduk
         console.log(text);
-        console.log("ben"+this.firstname+' '+this.lastname+"ben bir öğretmenim");
+        console.log("I am"+this.firstname+' '+this.lastname+"and I am a teacher");
     }
 }
 class Student extends User(){
@@ -25,13 +25,13 @@ class Student extends User(){
         this.courses=[];
     }
     introduce(){
-        console.log("ben"+this.firstname+' '+this.lastname+"ben bir öğrenciyim");
+        console.log("I am"+this.firstname+' '+this.lastname+"and I am a student");
     }
 }
 
-let teacher = new Teacher(1,"nadir","javed");
+let teacher = new Teacher(1,"ahmet","celik");
 teacher.introduce();
 
-let student = new Student(2,"lucas","bartram");
+let student = new Student(2,"ahmet","celik");
 let course =student.courses=["Matematik","Coğrafya"];
 console.log("course info",course);
